@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Maria Mety - Galeri</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        .gallery {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .image-row img {
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-wrapper {
+            text-align: center;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,12 +61,19 @@
 
     <main>
         <section class="gallery">
-            <img src="images/foto-maria.jpg" alt="Foto Maria Mety" />
-            <img src="images/perpustakaan.jpg" alt="Foto Perpustakaan" />
-            <video width="320" height="240" controls>
-                <source src="images/video-pustakawan.mp4" type="video/mp4" />
-                Browser Anda tidak mendukung video.
-            </video>
+            <div class="image-row">
+                <img src="perpus1.jpg" alt="Perpustakaan Maria Mety 1" />
+                <img src="perpus2.jpg" alt="Perpustakaan Maria Mety 2" />
+            </div>
+
+            <div class="video-wrapper">
+                <div class="video-title">Pustakawan Menjawab Tantangan Transformasi Perpustakaan</div>
+                <iframe 
+                    src="https://www.youtube.com/embed/BZArbW0h-Jc" 
+                    title="Video Pustakawan"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
     </main>
 
